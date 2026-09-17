@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Kvarc: приложения и поддержка.">
+<title>Kvarc</title>
+<style>
+:root {
+  --bg: #F6F1E8; --fg: #1F1B16; --muted: #6B6153; --line: #E0D6C6;
+  --card: #FFFDF9; --accent: #C2562F;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17140F; --fg: #F2EAE0; --muted: #A79C8C; --line: #322C24;
+    --card: #1F1B15; --accent: #E8754A;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 32px 20px 72px;
+  background: var(--bg); color: var(--fg);
+  font: 17px/1.62 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+main { max-width: 720px; margin: 0 auto; }
+h1 { font-size: 30px; line-height: 1.2; margin: 0 0 8px; }
+h2 { font-size: 22px; margin: 40px 0 10px; }
+h3 { font-size: 18px; margin: 28px 0 8px; }
+p, ul, ol { margin: 0 0 14px; }
+li { margin: 0 0 6px; }
+a { color: var(--accent); }
+code {
+  font: 15px/1.4 ui-monospace, SFMono-Regular, Consolas, monospace;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 6px; padding: 1px 5px;
+}
+hr { border: 0; border-top: 1px solid var(--line); margin: 32px 0; }
+.meta {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 14px; padding: 16px 18px; margin: 20px 0 8px;
+}
+.meta p { margin: 0 0 6px; }
+.meta p:last-child { margin: 0; }
+.table-wrap { overflow-x: auto; margin: 0 0 18px; }
+table { border-collapse: collapse; width: 100%; font-size: 16px; }
+th, td { text-align: left; vertical-align: top; padding: 9px 12px; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; }
+.card {
+  display: block; background: var(--card); border: 1px solid var(--line);
+  border-radius: 16px; padding: 18px 20px; margin: 0 0 14px;
+  text-decoration: none; color: inherit;
+}
+.card b { display: block; font-size: 19px; margin-bottom: 4px; }
+.card span { color: var(--muted); }
+footer { margin-top: 48px; color: var(--muted); font-size: 15px; }
+</style>
+</head>
+<body>
+<main>
+<h1>Kvarc</h1>
+<p>Небольшие приложения, которые делают одно дело и делают его надёжно.</p>
+
+<h2>Приложения</h2>
+<a class="card" href="./privacy-vovremya.html">
+  <b>Вовремя</b>
+  <span>Будильник, который поднимает: миссии, резервный сигнал, погода голосом. Политика конфиденциальности.</span>
+</a>
+
+<h2>Поддержка</h2>
+<p>Вопрос, ошибка или предложение — пишите на
+<a href="mailto:kvarc.support@gmail.com">kvarc.support@gmail.com</a>. Отвечаем на том же языке,
+на котором написали.</p>
+
+<footer><p>Kvarc · ИП Медведь Э. В. · <a href="mailto:kvarc.support@gmail.com">kvarc.support@gmail.com</a></p></footer>
+
+</main>
+</body>
+</html>

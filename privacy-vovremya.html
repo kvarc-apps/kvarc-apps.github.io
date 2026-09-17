@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Политика конфиденциальности приложения «Вовремя»: что собирается, зачем и как отказаться.">
+<title>Политика конфиденциальности — Вовремя</title>
+<style>
+:root {
+  --bg: #F6F1E8; --fg: #1F1B16; --muted: #6B6153; --line: #E0D6C6;
+  --card: #FFFDF9; --accent: #C2562F;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17140F; --fg: #F2EAE0; --muted: #A79C8C; --line: #322C24;
+    --card: #1F1B15; --accent: #E8754A;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 32px 20px 72px;
+  background: var(--bg); color: var(--fg);
+  font: 17px/1.62 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+main { max-width: 720px; margin: 0 auto; }
+h1 { font-size: 30px; line-height: 1.2; margin: 0 0 8px; }
+h2 { font-size: 22px; margin: 40px 0 10px; }
+h3 { font-size: 18px; margin: 28px 0 8px; }
+p, ul, ol { margin: 0 0 14px; }
+li { margin: 0 0 6px; }
+a { color: var(--accent); }
+code {
+  font: 15px/1.4 ui-monospace, SFMono-Regular, Consolas, monospace;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 6px; padding: 1px 5px;
+}
+hr { border: 0; border-top: 1px solid var(--line); margin: 32px 0; }
+.meta {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 14px; padding: 16px 18px; margin: 20px 0 8px;
+}
+.meta p { margin: 0 0 6px; }
+.meta p:last-child { margin: 0; }
+.table-wrap { overflow-x: auto; margin: 0 0 18px; }
+table { border-collapse: collapse; width: 100%; font-size: 16px; }
+th, td { text-align: left; vertical-align: top; padding: 9px 12px; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; }
+.card {
+  display: block; background: var(--card); border: 1px solid var(--line);
+  border-radius: 16px; padding: 18px 20px; margin: 0 0 14px;
+  text-decoration: none; color: inherit;
+}
+.card b { display: block; font-size: 19px; margin-bottom: 4px; }
+.card span { color: var(--muted); }
+footer { margin-top: 48px; color: var(--muted); font-size: 15px; }
+</style>
+</head>
+<body>
+<main>
+<h1>Политика конфиденциальности</h1>
+<div class="meta"><p><strong>Дата вступления в силу:</strong> 17 сентября 2026 года</p><p><strong>Приложение:</strong> Вовремя (пакет <code>ru.kvarc.vovremya</code>)</p><p><strong>Оператор персональных данных:</strong> индивидуальный предприниматель Медведь Эрик Владиславович</p><p><strong>ОГРНИП:</strong> 326784700235339</p><p><strong>ИНН:</strong> 781141557519</p><p><strong>Связь:</strong> <a href="mailto:kvarc.support@gmail.com">kvarc.support@gmail.com</a></p><p><strong>Адрес:</strong> сообщается по запросу на почту, указанную выше</p></div>
+<hr>
+<h2>Коротко</h2>
+<p>Приложение — будильник. У него нет учётных записей, нет наших серверов и нет рекламы. Мы не знаем, как вас зовут, и не видим, что написано в ваших будильниках.</p>
+<p>Собирается два вида данных, и оба — с понятной целью:</p>
+<ol><li><strong>Обезличенная статистика работы будильника.</strong> Нужна ровно для одного: понять, у скольких людей будильник действительно звонит и на каких телефонах он молчит. Это единственное обещание приложения, и без цифр мы будем его проверять на глаз.</li><li><strong>Приблизительное местоположение — только если вы включили рассказ о погоде.</strong> Иначе не бывает.</li></ol>
+<p>Отключить статистику можно в настройках приложения в любой момент.</p>
+<hr>
+<h2>1. Статистика работы (AppMetrica)</h2>
+<p>Используется AppMetrica — сервис аналитики ООО «ЯНДЕКС».</p>
+<h3>Что отправляется</h3>
+<p>События, которые формирует приложение. Список полный, других нет:</p>
+<div class="table-wrap"><table><thead><tr><th>Событие</th><th>Что в нём</th><th>Зачем</th></tr></thead><tbody><tr><td><code>alarm_scheduled</code></td><td>тип повтора («один раз», «будни»…), тип миссии, включён ли резервный сигнал</td><td>понять, чем пользуются</td></tr><tr><td><code>alarm_fired</code></td><td>задержка срабатывания в миллисекундах</td><td>главная цифра: будильник прозвонил</td></tr><tr><td><code>alarm_missed</code></td><td>насколько опоздал</td><td>самая ценная цифра: будильник промолчал</td></tr><tr><td><code>alarm_snoozed</code></td><td>номер повтора</td><td>сколько раз откладывают</td></tr><tr><td><code>alarm_dismissed</code></td><td>тип миссии, сколько секунд заняло выключение</td><td>где люди застревают</td></tr><tr><td><code>backup_sound_fired</code></td><td>ничего</td><td>обычного звонка не хватило</td></tr><tr><td><code>reliability_snapshot</code></td><td>производитель прошивки, список ненастроенных разрешений</td><td>на каких телефонах теряем людей</td></tr><tr><td><code>onboarding_finished</code></td><td>сколько пунктов осталось незакрытыми</td><td>понятен ли мастер настройки</td></tr></tbody></table></div>
+<div class="meta"><p><strong>Чего в этих событиях нет:</strong> текста ваших меток, времени ваших будильников,</p></div>
+<p>выбранных мелодий, координат, контактов, ничего, что вы вводили руками.</p>
+<p>Дополнительно AppMetrica как сервис аналитики собирает технические сведения об устройстве и сессии: модель устройства, версию операционной системы, версию приложения, язык и страну, IP-адрес и собственный идентификатор установки AppMetrica. Состав определяется сервисом, а не нами; см. <a href="https://yandex.ru/legal/confidential/">политику AppMetrica</a>.</p>
+<h3>Чего мы не собираем</h3>
+<p><strong>Рекламный идентификатор (Google Advertising ID) не собирается.</strong> Рекламы в приложении нет, поэтому зависимость <code>analytics-identifiers</code>, которая его получала, исключена из сборки. Разрешения <code>com.google.android.gms.permission.AD_ID</code> в приложении нет — это можно проверить, посмотрев разрешения установленного APK.</p>
+<h3>Как отказаться</h3>
+<p>Настройки → «Отправлять статистику» → выключить. После этого приложение перестаёт отправлять события. Будильник работает так же: статистика ни на что в нём не влияет.</p>
+<hr>
+<h2>2. Приблизительное местоположение — для погоды</h2>
+<p>Запрашивается <strong>только</strong> когда вы включаете «Рассказать погоду» у конкретного будильника. Если вы этого не делали, разрешение не запрашивается и координаты не используются.</p>
+<ul><li>Запрашивается <strong>приблизительное</strong> местоположение (<code>ACCESS_COARSE_LOCATION</code>), не точное.</li><li>Координаты <strong>округляются до четырёх знаков после запятой</strong> — примерно до десятка метров — и отправляются в api.met.no, чтобы получить прогноз, а для названия города — в геокодер самого устройства (на телефонах с сервисами Google это сервис Google) либо, если его нет, в api.bigdatacloud.net.</li><li>Координаты и прогноз хранятся <strong>только на вашем устройстве</strong> и удаляются вместе с приложением. Наших серверов не существует, отправлять их нам некуда.</li><li>Прогноз запрашивается заранее — при открытии приложения и после выключения будильника, — и никогда в момент звонка.</li></ul>
+<p>Прогноз предоставляет Норвежский метеорологический институт (MET Norway), api.met.no. При запросе он получает округлённые координаты и IP-адрес. Данные — по лицензиям NLOD 2.0 и CC BY 4.0.</p>
+<p>Название города по координатам определяет геокодер устройства — на телефонах с сервисами Google Play это сервис Google (Google LLC), он получает округлённые координаты и язык устройства по правилам самих сервисов Google. Если такого геокодера на устройстве нет, запрос уходит в BigDataCloud (BigDataCloud Pty Ltd, Австралия), api.bigdatacloud.net: он получает округлённые координаты, язык устройства и IP-адрес. В обоих случаях запрос уходит только с вашего устройства и только тогда же, когда обновляется прогноз.</p>
+<p>Отозвать доступ можно в настройках Android в любой момент. Погода замолчит, будильник продолжит звонить.</p>
+<hr>
+<h2>3. Покупки</h2>
+<p>Покупок в приложении нет: все функции бесплатны. Платёжных данных мы не получаем и не храним.</p>
+<hr>
+<h2>4. Разрешения и зачем они</h2>
+<div class="table-wrap"><table><thead><tr><th>Разрешение</th><th>Зачем</th></tr></thead><tbody><tr><td>Точные будильники</td><td>иначе система откладывает срабатывание — будильник опаздывает</td></tr><tr><td>Уведомления</td><td>без них не показать экран звонка</td></tr><tr><td>Полноэкранное уведомление</td><td>экран звонка поверх заблокированного телефона</td></tr><tr><td>Показ поверх других окон</td><td>чтобы звонок пробился, когда система не даёт запустить экран</td></tr><tr><td>Запуск при загрузке</td><td>восстановить будильники после перезагрузки</td></tr><tr><td>Вибрация, wake lock</td><td>сам звонок</td></tr><tr><td>Распознавание активности</td><td>миссия «пройти шаги», по вашему выбору</td></tr><tr><td>Приблизительное местоположение</td><td>погода, по вашему выбору</td></tr><tr><td>Интернет</td><td>статистика и прогноз погоды</td></tr></tbody></table></div>
+<hr>
+<h2>5. Дети</h2>
+<p>Приложение не предназначено для детей и не собирает сведения о возрасте.</p>
+<h2>6. Ваши права</h2>
+<p>Данные обезличены и не позволяют вас идентифицировать, поэтому выдать «вашу копию» технически не из чего. Что можно сделать:</p>
+<ul><li>выключить отправку статистики в настройках;</li><li>отозвать доступ к местоположению в настройках Android;</li><li>удалить приложение — вместе с ним удаляются все локальные данные, включая будильники и кэш погоды.</li></ul>
+<p>По вопросам обработки данных: <a href="mailto:kvarc.support@gmail.com">kvarc.support@gmail.com</a>.</p>
+<h2>7. Изменения</h2>
+<p>Об изменениях этой политики мы сообщим, обновив дату вступления в силу и опубликовав новую версию по тому же адресу.</p>
+<footer><p><a href="./">Kvarc</a> · <a href="mailto:kvarc.support@gmail.com">kvarc.support@gmail.com</a></p></footer>
+</main>
+</body>
+</html>
